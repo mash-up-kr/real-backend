@@ -1,6 +1,6 @@
-from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from member.models import User
 
 DREAM_TAG = (
     (0, 'CAN DO'),
@@ -12,7 +12,7 @@ DREAM_TAG = (
 
 
 class Dream(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, null=False)
     description = models.TextField()
     start_at = models.DateField()
