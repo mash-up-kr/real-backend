@@ -3,6 +3,6 @@ from django.db import models
 
 
 class User(AbstractUser):
-    nickname = models.CharField('nickname', max_length=50, blank=True)
-    email = models.EmailField('email', unique=True, blank=True, null=True)
+    nickname = models.CharField('nickname', max_length=50)
+    email = models.EmailField('email', unique=True)
 
