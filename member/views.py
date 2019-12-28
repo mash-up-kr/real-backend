@@ -46,7 +46,7 @@ class LoginAPIView(GenericAPIView):
         )
 
 
-class UserRetrieveUpdateDeleteAPIView(APIView):
+class UserRetrieveUpdateDestroyAPIView(APIView):
     authentication_classes = (TokenAuthentication,)
     permission_classes = [permissions.IsAuthenticated]
 
